@@ -5,14 +5,19 @@ class EmpWage {
 
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-        double empCheck = Math.floor(Math.random() * 10) % 3;
+        int empCheck = (int) Math.floor(Math.random() * 10) % 3;
         // System.out.println();
         int empPerHour = 0;
         int empWage = 0;
-        if (empCheck == isPresent) {
+        switch (empCheck) {
+        case isPresent:
             empPerHour = 8;
-        } else if (empCheck == isPartTime) {
+            break;
+        case isPartTime:
             empPerHour = 4;
+            break;
+        default:
+            empPerHour = 0;
         }
         empWage = empPerHour * empPerRate;
         System.out.println("Emp Wage:- " + empWage);
