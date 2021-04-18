@@ -1,16 +1,18 @@
 class EmpWage {
+    static final int isPresent = 1;
+    static final int empPerRate = 20;
+
     public static void main(String[] args) {
         // TODO Auto-generated method stub
-
-        int isPresent = 1;
         double empCheck = Math.floor(Math.random() * 10) % 2;
 
         // System.out.println();
-
+        int empPerHour = 0;
+        int empWage = 0;
         if (empCheck == isPresent) {
-            System.out.println("Employee is present.");
-        } else {
-            System.out.println("Employee is Absent.");
+            empPerHour = 8;
         }
+        empWage = empPerHour * empPerRate;
+        System.out.println("Emp Wage:- " + empWage);
     }
 }
